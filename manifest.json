@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Medium Reads Logger",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://medium.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "author": "Dev Gautam Kumar",
+  "description": "A Chrome extension to log and track Medium articles for later reading and analysis."
+}
